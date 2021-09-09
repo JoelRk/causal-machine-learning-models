@@ -15,7 +15,13 @@ I therefore assumed to be in the following framework:
 Where Theta is my parameter of interest (average treatment effect), xi are a set of control variables and ui as well as vi are error terms. Next to the OLS approach, I want to estimate the average treatment effect in this setting with the "Naive" double machine learning estimator stated above. I retrieve this approach:
 
 1: Estimate <a href="https://www.codecogs.com/eqnedit.php?latex=d_i=\hat{m}_0({x}_i)&plus;\hat{v}_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?d_i=\hat{m}_0({x}_i)&plus;\hat{v}_i" title="d_i=\hat{m}_0({x}_i)+\hat{v}_i" /></a>
+
 2: Estimate <a href="https://www.codecogs.com/eqnedit.php?latex=y_i=\hat{g}_0({x}_i)&plus;\hat{u}_i" target="_blank"><img src="https://latex.codecogs.com/gif.latex?y_i=\hat{g}_0({x}_i)&plus;\hat{u}_i" title="y_i=\hat{g}_0({x}_i)+\hat{u}_i" /></a>
+
 3: Estimate <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\theta}=(\sum_{i=1}^N&space;\hat{v}_id_i)^{-1}\sum_{i=1}^N&space;\hat{v}_i&space;(y_i-\hat{g}_0({x}_i))" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\theta}=(\sum_{i=1}^N&space;\hat{v}_id_i)^{-1}\sum_{i=1}^N&space;\hat{v}_i&space;(y_i-\hat{g}_0({x}_i))" title="\hat{\theta}=(\sum_{i=1}^N \hat{v}_id_i)^{-1}\sum_{i=1}^N \hat{v}_i (y_i-\hat{g}_0({x}_i))" /></a>
 
+
+Result:
+
+![dml_estimator_distribution](https://user-images.githubusercontent.com/32592350/132741529-e83758cd-4258-4fe0-b476-a31121099923.png)
 
